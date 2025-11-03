@@ -161,7 +161,7 @@ img {
 .top {
   display: flex;
   flex-direction: column;
-  justify-content: top;
+  justify-content: flex-start;
   margin-top: 1rem;
 }
 
