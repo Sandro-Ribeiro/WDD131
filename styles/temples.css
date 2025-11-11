@@ -1,5 +1,5 @@
 :root {
-  --purple: rgb(60, 10, 100);
+  --indigo-dye: rgb(0, 65, 106);
   --blue: rgb(29, 77, 114);
   --blue-1: rgba(29, 77, 114, 0.1);
   --blue-7: rgba(29, 77, 114, 0.7);
@@ -20,13 +20,14 @@ body {
 }
 
 header {
-  background-color: var(--purple);
+  background-color: var(--indigo-dye);
   color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  padding: 0.5rem 1rem
 }
 
 h1 {
@@ -36,7 +37,7 @@ h1 {
 #hambutton {
   display: block;
   font-size: 3rem;
-  background-color: var(--purple);
+  background-color: var(--indigo-dye);
   text-decoration: none;
   color: white;
   border: none;
@@ -76,6 +77,12 @@ nav a:hover~#navmenu~#hambutton {
   color: #000;
 }
 
+na.span {
+  width: 0;
+  padding: auto;;
+  overflow: hidden;
+}
+
 nav.show {
   width: 100%;
 }
@@ -105,8 +112,12 @@ main img {
 }
 
 h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+  background-color: var(--indigo-dye);
+  color: white;
+  text-align: left;
+  margin-bottom: 1rem;
+  padding: 1rem 1rem;
+
 }
 
 .res-grid {
@@ -125,7 +136,7 @@ figcaption {
 }
 
 footer {
-  background-color: var(--purple);
+  background-color: var(--indigo-dye);
   color: white;
   text-align: center;
   padding: 10px;

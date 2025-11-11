@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Temple Album</title>
+    <meta name="author" content="Sandro Ribeiro"/>
+    <title>WDD 131 - Dynamic Web Fundamentals - Sandro Ribeiro</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - W02 Assignment: Picture Album" />
     <link rel="stylesheet" href="styles/temples.css" />
     <link rel="stylesheet" href="styles/temples-large.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,67 +16,63 @@
     />
     <script defer src="scripts/temples.js"></script>
   </head>
-
   <body>
     <header>
+      <span id="courses-title">WDD 131 <br> Dinamic Fundamentals</span>
       <h1 class="handler">Temple Album</h1>
       <button id="hambutton" type="button" aria-expanded="false"></button>
       <nav id="navmenu">
-        <a
-          href="#"
-          onclick="toggleActive(this)"
-          ontouchstart="toggleActive(this)"
-          >Home</a
-        >
         <a href="#">Old</a>
         <a href="#">New</a>
         <a href="#">Large</a>
         <a href="#">Small</a>
       </nav>
     </header>
-
     <main>
-      <h2>Home</h2>
-      <div class="res-grid">
-        <figure>
-          <img src="images/temples/sandiegolarge.jpg" alt="Temple Image" />
-          <figcaption>San Diego California</figcaption>
-        </figure>
-        <figure>
-          <img src="images/temples/sandiegolarge.jpg" alt="Temple Image" />
-          <figcaption>San Diego California</figcaption>
-        </figure>
-        <figure>
-          <img src="images/temples/sandiegolarge.jpg" alt="Temple Image" />
-          <figcaption>San Diego California</figcaption>
-        </figure>
-        <figure>
-          <img src="images/temples/sandiegolarge.jpg" alt="Temple Image" />
-          <figcaption>San Diego California</figcaption>
-        </figure>
-        <figure>
-          <img src="images/temples/sandiegolarge.jpg" alt="Temple Image" />
-          <figcaption>San Diego California</figcaption>
-        </figure>
-        <figure>
-          <img src="images/temples/sandiegolarge.jpg" alt="Temple Image" />
-          <figcaption>San Diego California</figcaption>
-        </figure>
-        <figure>
-          <img src="images/temples/sandiegolarge.jpg" alt="Temple Image" />
-          <figcaption>San Diego California</figcaption>
-        </figure>
-        <figure>
-          <img src="images/temples/sandiegolarge.jpg" alt="Temple Image" />
-          <figcaption>San Diego California</figcaption>
-        </figure>
-        <figure>
-          <img src="images/temples/sandiegolarge.jpg" alt="Temple Image" />
-          <figcaption>San Diego California</figcaption>
-        </figure>
-      </div>
-    </main>
+      <section class="card">
+        <h2>Brazilians temples</h2>
+        <div class="res-grid">
+          <figure>
+            <img src="images/temples/campinas_brazil.webp" alt="CampinasTemple " />
+            <figcaption>Campinas - Brazil</figcaption>
+          </figure>
+          <figure>
+            <img src="images/temples/belo_horizonte_brazil.webp" alt="Belo Horizonte Temple" />
+            <figcaption>Belo Horizonte - Brazil</figcaption>
+          </figure>
+          <figure>
+            <img src="images/temples/recife_brazil.webp" alt="Rcife Temple" />
+            <figcaption>Recife - Brazil</figcaption>
+          </figure>
+          <figure>
+            <img src="images/temples/sao_paulo_brazil.webp" alt="Sao Paulo Temple" />
+            <figcaption>Sao Paulo - Brazil</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section>
+        <h2>International temples</h2>
+        <div class="res-grid">
+          <figure>
+            <img src="images/temples/melbourne_australia.webp" alt="Temple Image" />
+            <figcaption>Melbourne - Austrália</figcaption>
+          </figure>
+          <figure>
+            <img src="images/temples/mesa_arizona.webp" alt="Temple Image" />
+            <figcaption>Mesa - Arizona</figcaption>
+          </figure>
+          <figure>
+            <img src="images/temples/mexico_city.webp" alt="Temple Image" />
+            <figcaption>México City</figcaption>
+          </figure>
+          <figure>
+            <img src="images/temples/sandiegolarge.webp" alt="Temple Image" />
+            <figcaption>San Diego California</figcaption>
+          </figure>
+        </div>
+      </section>
 
+    </main>
     <footer>
       <p><span id="currentYear"></span> Sandro Henrique Antunes Ribeiro</p>
       <p class="smaller" id="lastModified">
