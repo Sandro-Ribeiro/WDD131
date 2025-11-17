@@ -1,6 +1,6 @@
 :root {
-  --red: rgba(210, 16, 52, 1);
-  --green: rgba(0, 120, 73, 1);
+  --red: rgb(99, 122, 95);
+  --green: rgb(67, 75, 65);
 }
 
 * {
@@ -69,7 +69,7 @@ h2 {
 
 .weather svg {
   width: 100px;
-  height: auto;
+  height: 100%;
 }
 
 .cls-1 {
@@ -131,3 +131,5 @@ h2 {
     display: none;
   }
 }
+
+/* ✅ CORREÇÃO: A chave extra '}' foi removida daqui */
