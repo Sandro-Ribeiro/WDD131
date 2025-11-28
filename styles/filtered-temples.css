@@ -74,7 +74,7 @@ nav a:active {
 }
 
 nav a:hover~#navmenu~#hambutton {
-  background-color: var(---yellow);
+  background-color: var(--yellow);
   color: #000;
 }
 
@@ -139,8 +139,6 @@ section img {
   border: 1px solid rgba(0, 0, 0, .3);
   box-shadow: 0 0 10px #333;
 }
-
-
 
 footer {
   background-color: var(--purple);
