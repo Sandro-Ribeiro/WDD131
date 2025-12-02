@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Confirmation</title>
+    <meta name="description" content="Product review confirmation page for WDD 131" />
+    <meta name="author" content="Sandro Ribeiro" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Great+Vibes&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/form.css" />
+
+    <script defer src="scripts/review.js"></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Review Submitted!</h1>
+    </header>
+    <main>
+        <div class="review-message">
+            <p>Thank you for submitting your product review.</p>
+            <p>Your feedback is valuable to us.</p>
+            <p id="reviewCountMessage">
+                You have submitted
+                <span id="reviewCount">0</span> reviews so far.
+            </p>
+
+            <a href="form.html">Back to Review Form</a>
+        </div>
+    </main>
+    <footer>
+        <p>
+            <span id="currentYear"></span> Sandro Ribeiro, Uberaba, MG, Brazil
+        </p>
+        <p class="highlight" id="lastModified">
+            Last Modification: 01/01/1970 12:00:00
+        </p>
+    </footer>
+</body>
+
+</html>
