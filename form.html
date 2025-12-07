@@ -17,116 +17,90 @@
     <script defer src="scripts/form.js"></script>
     <script src="scripts/getdates.js" defer></script>
   </head>
-
   <body>
     <header>
-      <h1>Product Review</h1>
+      <div class="page-container">
+        <h1>Product Review</h1>
+      </div>
     </header>
     <main>
-      <form action="review.html" method="get">
-        <div class="item">
-          <label for="product_name">Product Name</label>
-          <select id="product_name" name="product_name" required>
-            <option value="" selected disabled>Select a Product ...</option>
-          </select>
-        </div>
-        <div class="item">
-          <p>Overall Rating</p>
-          <div class="radio-group">
-            <label for="overall-1">&star;</label>
-            <label for="overall-2">&star;&star;</label>
-            <label for="overall-3">&star;&star;&star;</label>
-            <label for="overall-4">&star;&star;&star;&star;</label>
-            <label for="overall-5">&star;&star;&star;&star;&star;</label>
-            <input
-              type="radio"
-              id="overall-1"
-              name="overall"
-              value="1"
-              required
-            />
-            <input
-              type="radio"
-              id="overall-2"
-              name="overall"
-              value="2"
-              required
-            />
-            <input
-              type="radio"
-              id="overall-3"
-              name="overall"
-              value="3"
-              required
-            />
-            <input
-              type="radio"
-              id="overall-4"
-              name="overall"
-              value="4"
-              required
-            />
-            <input
-              type="radio"
-              id="overall-5"
-              name="overall"
-              value="5"
-              required
-            />
+      <div class="page-container">
+        <p class="required-note">
+          Fields marked with an asterisk (<span class="required">*</span>) are required.
+        </p>
+        <form action="review.html" method="get">
+          <div class="item">
+            <label for="product_name">Product Name<span class="required">*</span></label>
+            <select id="product_name" name="product_name" required>
+              <option value="" selected disabled>Select a Product ...</option>
+            </select>
           </div>
-        </div>
-        <div class="item">
-          <label for="install">Date of Installation</label>
-          <input type="date" id="install" name="install" required>
-        </div>
-        <div class="item">
-          <p>
-            Which features did you find useful in the product?<br />
-            <em>(Check all that apply)</em>
-          </p>
-          <div class="checkbox-group">
-            <input
-              type="checkbox"
-              id="durability"
-              name="durability"
-              value="durability"
-            />
-            <label for="durability">Durability</label>
-            <input type="checkbox" id="ease" name="ease" value="ease" />
-            <label for="ease">Ease of Use</label>
-            <input
-              type="checkbox"
-              id="performance"
-              name="performance"
-              value="performance"
-            />
-            <label for="performance">Performance</label>
-            <input type="checkbox" id="design" name="design" value="design" />
-            <label for="design">Design</label>
+          <div class="item">
+            <p>Overall Rating</p>
+            <div class="radio-group">
+              <div class="radio-item">
+                <label for="overall-1">&star;</label>
+                <input type="radio" id="overall-1" name="overall" value="1" required />
+              </div>
+              <div class="radio-item">
+                <label for="overall-2">&star;&star;</label>
+                <input type="radio" id="overall-2" name="overall" value="2" required />
+              </div>
+              <div class="radio-item">
+                <label for="overall-3">&star;&star;&star;</label>
+                <input type="radio" id="overall-3" name="overall" value="3" required />
+              </div>
+              <div class="radio-item">
+                <label for="overall-4">&star;&star;&star;&star;</label>
+                <input type="radio" id="overall-4" name="overall" value="4" required />
+              </div>
+              <div class="radio-item">
+                <label for="overall-5">&star;&star;&star;&star;&star;</label>
+                <input type="radio" id="overall-5" name="overall" value="5" required />
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="item">
-          <label for="review"
-            >Written Review <span class="smaller">(Optional)</span></label
-          >
-          <textarea id="review" name="review"></textarea>
-        </div>
-        <div class="item">
-          <label for="user"
-            >Your Name <span class="smaller">(Optional)</span></label
-          >
-          <input type="text" id="user" name="user" />
-        </div>
-        <input type="submit" value="Post Review" />
-      </form>
+          <div class="item">
+            <label for="install">Date of Installation<span class="required">*</span></label>
+            <input type="date" id="install" name="install" required>
+          </div>
+          <div class="item">
+            <p>
+              Which features did you find useful in the product?<br />
+              <em>(Check all that apply)</em>
+            </p>
+            <div class="checkbox-group">
+              <input type="checkbox" id="durability" name="durability" value="durability" />
+              <label for="durability">Durability</label>
+              <input type="checkbox" id="ease" name="ease" value="ease" />
+              <label for="ease">Ease of Use</label>
+              <input type="checkbox" id="performance" name="performance" value="performance" />
+              <label for="performance">Performance</label>
+              <input type="checkbox" id="design" name="design" value="design" />
+              <label for="design">Design</label>
+            </div>
+          </div>
+          <div class="item">
+            <label for="review">Written Review <span class="smaller">(Optional)</span></label>
+            <textarea id="review" name="review"></textarea>
+          </div>
+          <div class="item">
+            <label for="user">Your Name <span class="smaller">(Optional)</span></label>
+            <input type="text" id="user" name="user" />
+          </div>
+          <input type="submit" value="Post Review" />
+        </form>
+      </div>
     </main>
     <footer>
-      <p>
-        <span id="currentYear"></span> Sandro Ribeiro, Uberaba, MG, Brazil
-      </p>
-      <p class="highlight" id="lastModified">
-        Last Modification: 01/01/1970 12:00:00
-      </p>
+      <div class="page-container">
+        <p>
+          <span id="currentYear"></span> Sandro Ribeiro, Uberaba, MG, Brazil
+        </p>
+        <p class="highlight" id="lastModified">
+          Last Modification: 01/01/1970 12:00:00
+        </p>
+      </div>
     </footer>
   </body>
 </html>

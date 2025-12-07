@@ -13,6 +13,21 @@
 html,
 body {
   font-family: Lato, Helvetica, Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  flex: 0;
+  width: 100%;
+  max-width: 500px;
 }
 
 header,
@@ -21,6 +36,8 @@ footer {
   background-color: var(--back1);
   text-align: center;
   padding: 1rem;
+  width: 100%;
+  max-width: 500px;
 }
 
 h1 {
@@ -49,6 +66,8 @@ label,
 .item p {
   font-size: .85rem;
   font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 
 input[type="text"],
@@ -68,9 +87,9 @@ input:focus {
 }
 
 input[type="checkbox"],
-[type="radio"] {
-  width: 25px;
-  height: 25px;
+input[type="radio"]{
+  width: 20px;
+  height: 20px;
 }
 
 input[type="submit"] {
@@ -87,10 +106,29 @@ textarea {
 .radio-group {
   margin-top: .25rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 10px;
+  align-items: space-around;
   justify-items: center;
 }
 
+.page-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.radio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.radio-item label {
+  font-size: 1.2rem;
+  line-height: 1;
+  padding-bottom: 5px;
+}
 
 .checkbox-group {
   display: grid;
@@ -108,11 +146,37 @@ textarea {
   color: navy;
 }
 
+.required {
+  color: red;
+  font-weight: 700;
+  margin-left: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.required-note {
+  font-size: 0.9em;
+  color: #666;
+  padding: 10px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
 
 @media (min-width: 600px) {
 
   h1 {
     font-size: 2rem;
+  }
+
+  .required {
+    color: darkred;
+  }
+
+  .radio-group {
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    gap: 20px;
   }
 
 }
