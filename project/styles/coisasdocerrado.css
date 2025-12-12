@@ -292,7 +292,6 @@ nav a {
   text-align: center;
 }
 
-
 .biodiversity img {
   display: block;
   width: 100%;
@@ -523,6 +522,37 @@ iframe {
   border: 0;
   margin: 20px;
   margin-left: 0;
+}
+
+
+main h1 {
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0 0.5rem 0;
+}
+
+main p,
+main ul {
+  color: white;
+  max-width: 1000px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+main ul {
+  list-style-type: disc;
+  padding-left: 3rem;
+}
+
+main ul li {
+  margin-bottom: 0.75rem;
+}
+
+references main{
+  width: 100%;
 }
 
 /* Desktop View */
