@@ -3,19 +3,19 @@ const teamMembers = [
     id: 'gm',
     name: 'Gustavo',
     title: 'CEO',
-    image: 'images/contact/ind_01.webp',
+    image: 'ind_01.webp',
   },
   {
     id: 'ph',
     name: 'Philipe',
     title: 'Designer',
-    image: 'images/contact/ind_02.webp',
+    image: 'ind_02.webp',
   },
   {
     id: 'ad',
     name: 'Adriana',
     title: 'Marketing',
-    image: 'images/contact/ind_03.webp',
+    image: 'ind_03.webp',
   },
 ];
 
