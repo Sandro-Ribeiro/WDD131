@@ -1,3 +1,32 @@
+
+const teamMembers = [
+    { id: 'gm', name: 'Gustavo', title: 'CEO', image: 'ind_01.webp' },
+    { id: 'ph', name: 'Philipe', title: 'Designer', image: 'ind_02.webp' },
+    { id: 'ad', name: 'Adriana', title: 'Marketing', image: 'ind_03.webp' },
+];
+
+
+function displayTeam(members) {
+
+    const teamContainer = document.getElementById('team-profiles'); 
+
+    const htmlOutput = members.map(member => {
+        return `
+            <figure>
+                <img src="images/contact/${member.image}" 
+                     alt="Profile image of ${member.name}, ${member.title}" 
+                     loading="lazy">
+                <figcaption>${member.name}</figcaption>
+            </figure>
+        `;
+    }).join('');
+
+    if (teamContainer) {
+        teamContainer.innerHTML = htmlOutput;
+    }
+}
+
+
 function calculateWindChill(tempC, speed) {
     return 13.12 + (0.6215 * tempC) - (11.37 * Math.pow(speed, 0.16)) + (0.3965 * tempC * Math.pow(speed, 0.16));
 }
@@ -23,16 +52,33 @@ function updateFooterDates() {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    updateFooterDates(); 
+    updateFooterDates();
 
     let tempC = 23; 
     let speed = 8.5;
 
-    [cite_start]
     if (tempC <= 10 && speed > 4.8) {
         const wcf = calculateWindChill(tempC, speed);
         document.getElementById("wcf").innerHTML = `${wcf.toFixed(1)} °C`;
     } else {
         document.getElementById("wcf").innerHTML = "N/A";
+    }
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav'); 
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+
+            mainNav.classList.toggle('open');
+
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+    }
+
+
+    if (document.getElementById('team-profiles')) {
+        displayTeam(teamMembers);
     }
 });
